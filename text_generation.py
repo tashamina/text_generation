@@ -24,8 +24,8 @@ def separate_sentiment(style):
         with open("./data/clean_positive.txt", "w",encoding='utf-8') as outfile:
             with open("positive.csv", "r", encoding='utf-8') as f:
                 for line in f.readlines():
-                    result = re.sub(r'[0-9]+,', '', line).replace(",1","")
-                    #result = re.sub(r"<br /><br />", "", res)
+                    res = re.sub(r'[0-9]+,', '', line).replace(",1","")
+                    result = re.sub(r"<br /><br />", "", res)
                     for r in result:
                         outfile.write(r)
                         
